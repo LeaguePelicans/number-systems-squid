@@ -11,7 +11,7 @@ public class Decimal {
 	}
 	public static void decToBin() {
 		 Scanner key = new Scanner(System.in);
-		 System.out.println("Enter a decimal you want to convert to binary:");
+		 System.out.println("Enter a decimal you want to convert to binary.");
 		 int num = key.nextInt();
 		 Stack <Integer>s = new Stack<Integer>();
 		 int currentNum = num;
@@ -37,48 +37,7 @@ public class Decimal {
 		 Scanner key = new Scanner(System.in);
 		 System.out.println("Enter a decimal you want to convert to hexadecimal:");
 		 int num = key.nextInt();
-		 int result = 0;
-		 Stack <String>s = new Stack<String>();
-		 int remainder = 0;
-		 while(result !=0) {
-			 result = num/16;
-			 remainder = num%16;
-			 if(remainder >=10) {
-			 switch(remainder) {
-			 case 10:
-				 s.push("A");
-			 case 11:
-				 s.push("B");
-			 case 12:
-				 s.push("C");		 
-			 case 13:
-				 s.push("D");
-			 case 14:
-				 s.push("E");
-			 case 15:
-				 s.push("F");
-			 case 16:
-				 s.push("10");
-			 }}
-			 else {
-				 s.push(remainder+"");
-			 }
-			
-			 
-	
-		 }
-		 StringBuilder str = new StringBuilder("");
-		 for (String string : s) {
-			str.append(string);
-		}
-		 System.out.println(str);
+		 System.out.println(Integer.toHexString(num));
 		 
-	}
-	public static void main(String[] args) throws IOException {
-		PrintWriter pw = new PrintWriter(new FileWriter("/Users/league/Desktop/csis.txt"));
-		Decimal d = new Decimal(pw);
-		d.decToBin();
-		d.decToHex();
-		
 	}
 }

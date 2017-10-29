@@ -13,7 +13,7 @@ import java.io.*;
  */
 
 public class Driver {
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws Exception{
 		int choice;
 		
 		PrintWriter pw = new PrintWriter(new FileWriter("/Users/league/Desktop/csis.txt"));
